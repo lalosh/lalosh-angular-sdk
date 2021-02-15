@@ -4,6 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "@lalosh/angular-sdk": {
+      
       "projectType": "library",
       "root": "projects/lalosh/angular-sdk",
       "sourceRoot": "projects/lalosh/angular-sdk/src",
