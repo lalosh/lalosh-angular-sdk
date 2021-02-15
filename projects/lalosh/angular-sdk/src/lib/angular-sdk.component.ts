@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'lib-angular-sdk',
   template: `
     <p>
-      angular-sdk works!
+      @lalosh/angular-sdk!
     </p>
   `,
   styles: [

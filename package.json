@@ -1,14 +1,17 @@
 {
   "name": "lalosh-angular-sdk",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build:dev": "ng build @lalosh/angular-sdk --watch",
+    "build:prod": "ng build @lalosh/angular-sdk --prod",
+    "publish:npm": "cd ./dist; npm publish"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~11.0.4",
     "@angular/common": "~11.0.4",

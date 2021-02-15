@@ -1,0 +1,19 @@
+{
+  "name": "@lalosh/angular-sdk",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.0.9",
+    "@angular/core": "^11.0.9"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "main": "bundles/lalosh-angular-sdk.umd.js",
+  "module": "fesm2015/lalosh-angular-sdk.js",
+  "es2015": "fesm2015/lalosh-angular-sdk.js",
+  "esm2015": "esm2015/lalosh-angular-sdk.js",
+  "fesm2015": "fesm2015/lalosh-angular-sdk.js",
+  "typings": "lalosh-angular-sdk.d.ts",
+  "metadata": "lalosh-angular-sdk.metadata.json",
+  "sideEffects": false
+}
