@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -19,7 +18,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@lalosh/angular-sdk": [
+        "dist/lalosh/angular-sdk/lalosh-angular-sdk",
+        "dist/lalosh/angular-sdk"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,

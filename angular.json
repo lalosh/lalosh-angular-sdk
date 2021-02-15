@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "@lalosh/angular-sdk": {
+      "projectType": "library",
+      "root": "projects/lalosh/angular-sdk",
+      "sourceRoot": "projects/lalosh/angular-sdk/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/lalosh/angular-sdk/tsconfig.lib.json",
+            "project": "projects/lalosh/angular-sdk/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lalosh/angular-sdk/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lalosh/angular-sdk/src/test.ts",
+            "tsConfig": "projects/lalosh/angular-sdk/tsconfig.spec.json",
+            "karmaConfig": "projects/lalosh/angular-sdk/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lalosh/angular-sdk/tsconfig.lib.json",
+              "projects/lalosh/angular-sdk/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@lalosh/angular-sdk"
 }
