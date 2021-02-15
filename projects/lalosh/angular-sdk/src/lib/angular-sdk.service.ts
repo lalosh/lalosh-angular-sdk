@@ -12,11 +12,11 @@ export class AngularSdkService {
     this.client = null;
   }
 
-  init(options: LablebSDKOptions) {
+  public init(options: LablebSDKOptions) {
     this.client = init(options);
   }
 
-  search(query: string) {
+  public search(query: string) {
     return this.client?.search({ query });
   }
 }
