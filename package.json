@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "build:dev": "ng build @lalosh/angular-sdk --watch",
     "build:prod": "ng build @lalosh/angular-sdk --prod",
-    "publish:npm": "cd ./dist/lalosh/angular-sdk; npm publish"
+    "publish:npm": "rm -rf ./dist;cd ./dist/lalosh/angular-sdk; npm publish"
   },
   "publishConfig": {
     "access": "public"
