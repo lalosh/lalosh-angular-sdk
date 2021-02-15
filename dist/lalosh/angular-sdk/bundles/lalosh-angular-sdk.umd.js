@@ -1,12 +1,20 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core')) :
-    typeof define === 'function' && define.amd ? define('@lalosh/angular-sdk', ['exports', '@angular/core'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.lalosh = global.lalosh || {}, global.lalosh['angular-sdk'] = {}), global.ng.core));
-}(this, (function (exports, i0) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@lableb/javascript-sdk')) :
+    typeof define === 'function' && define.amd ? define('@lalosh/angular-sdk', ['exports', '@angular/core', '@lableb/javascript-sdk'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.lalosh = global.lalosh || {}, global.lalosh['angular-sdk'] = {}), global.ng.core, global.javascriptSdk));
+}(this, (function (exports, i0, javascriptSdk) { 'use strict';
 
     var AngularSdkService = /** @class */ (function () {
         function AngularSdkService() {
+            this.client = null;
         }
+        AngularSdkService.prototype.init = function (options) {
+            this.client = javascriptSdk.init(options);
+        };
+        AngularSdkService.prototype.search = function (query) {
+            var _a;
+            return (_a = this.client) === null || _a === void 0 ? void 0 : _a.search({ query: query });
+        };
         return AngularSdkService;
     }());
     AngularSdkService.ɵprov = i0.ɵɵdefineInjectable({ factory: function AngularSdkService_Factory() { return new AngularSdkService(); }, token: AngularSdkService, providedIn: "root" });

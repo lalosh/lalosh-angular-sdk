@@ -1,7 +1,17 @@
 import { ɵɵdefineInjectable, Injectable, Component, NgModule } from '@angular/core';
+import { init } from '@lableb/javascript-sdk';
 
 class AngularSdkService {
-    constructor() { }
+    constructor() {
+        this.client = null;
+    }
+    init(options) {
+        this.client = init(options);
+    }
+    search(query) {
+        var _a;
+        return (_a = this.client) === null || _a === void 0 ? void 0 : _a.search({ query });
+    }
 }
 AngularSdkService.ɵprov = ɵɵdefineInjectable({ factory: function AngularSdkService_Factory() { return new AngularSdkService(); }, token: AngularSdkService, providedIn: "root" });
 AngularSdkService.decorators = [
