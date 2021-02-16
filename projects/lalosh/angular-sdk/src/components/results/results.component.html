@@ -1,0 +1,5 @@
+<p>results works!</p>
+<div *ngFor="let res of (searchResults | async)?.results">
+    <p>{{res?.id}}</p>
+    <p>{{res?.title}}</p>
+</div>

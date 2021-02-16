@@ -1,0 +1,10 @@
+import { OnInit } from '@angular/core';
+import { SearchResponse } from '@lableb/javascript-sdk/dist/types';
+import { BehaviorSubject } from 'rxjs';
+import { DataService } from '../../services/data.service';
+export declare class ResultsComponent implements OnInit {
+    private dataService;
+    searchResults: BehaviorSubject<Partial<SearchResponse>>;
+    constructor(dataService: DataService);
+    ngOnInit(): void;
+}

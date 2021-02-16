@@ -1,0 +1,11 @@
+import { OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { ClientService } from '../../services/client.service';
+import { DataService } from '../../services/data.service';
+export declare class SearchComponent implements OnInit {
+    private clientService;
+    private dataService;
+    searchInput: FormControl;
+    constructor(clientService: ClientService, dataService: DataService);
+    ngOnInit(): void;
+}

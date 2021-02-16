@@ -1,0 +1,6 @@
+import { ModuleWithProviders } from '@angular/core';
+import { SDKConfigurations } from '../services/config.service';
+export declare class LablebModule {
+    constructor(parentModule?: LablebModule);
+    static forRoot(SDKConfig: SDKConfigurations): ModuleWithProviders<LablebModule>;
+}
